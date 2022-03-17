@@ -21,5 +21,4 @@ This package is licensed under the MIT License. See the [LICENSE file](https://g
 
 ## Code of conduct
 
-Please make sure to adere to the code of conduct of ECLAIR (https://github.com/s-ilic/ECLAIR/blob/master/README.md) and cite the references therein. When using a likelihood of this package please make sure to cite appropriately the articles (links detailed above) where it has been developed, where the tools involved were first developed, where the data was released as described above and anything else you feel necessary.
-
+When using a likelihood of this package or some peaces please make sure to cite appropriately the articles (links detailed above) where the likelihood has been released, where the tools involved were first developed, where the data was released as described above and anything else you feel necessary. Please adere to the code of conduct of ECLAIR (https://github.com/s-ilic/ECLAIR/blob/master/README.md) and cite the references therein if you use it.
