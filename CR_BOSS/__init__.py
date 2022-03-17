@@ -1,23 +1,24 @@
-import numpy as np
-from scipy.interpolate import interp1d
-from scipy.integrate import trapz
 import classy
+import numpy as np
+from scipy.integrate import trapz
+from scipy.interpolate import interp1d
 
-"""Clustering ratio likelihood.
+"""BOSS DR7 and DR12 clustering ratio likelihood.
 
-This python module computes the likelihood of the clustering ratio for the combination
-of the BOSS DR7 and DR12 releases. 
+This module computes the likelihood of the clustering ratio (CR) for the
+combination of the BOSS DR7 and DR12 surveys. It is written for a usage in the
+ECLAIR suite https://github.com/s-ilic/ECLAIR.
 
-It is written for a direct usage in the code ECLAIR (https://github.com/s-ilic/ECLAIR)
-
-This likelihood was developed for the study pursued in XXX
-
+This likelihood was developed for the study XXX
+The CR was fisrt developed in https://arxiv.org/abs/1210.2365.
+The BOSS DR7 catalogue was released in https://arxiv.org/abs/0812.0649
+The BOSS DR12 catalogue was released in https://arxiv.org/abs/1501.00963
+The corresponding CR measurements were released in https://arxiv.org/abs/1712.02886.
 """
 
 # ************
 # *** Data ***
 # ************
-
 # BOSS DR7 release
 boss_dr7_z_min = [0.15]
 boss_dr7_z_max = [0.43]
@@ -50,7 +51,6 @@ z_int = (
 # ****************
 # *** Fiducial ***
 # ****************
-
 n_fid = 2.1
 R_fid = 22
 Om0_fid = 0.3
@@ -69,16 +69,17 @@ run_fid.compute()
 # ***********************************
 # *** Alcock-Paczynski correction ***
 # ***********************************
-
 def alpha_par(z, run_mod):
     res = (run_fid.Hubble(z) / run_fid.h()) / (run_mod.Hubble(z) / run_mod.h())
     return res
 
+
 def alpha_perp(z, run_mod):
     res = (run_mod.angular_distance(z) * run_mod.h()) / (
-            run_fid.angular_distance(z) * run_fid.h()
+        run_fid.angular_distance(z) * run_fid.h()
     )
     return res
+
 
 def alpha(z, run_mod):
     res = np.power(
@@ -91,7 +92,6 @@ def alpha(z, run_mod):
 # *******************
 # *** CR function ***
 # *******************
-
 def cr(z, class_run):
 
     # Computing matter power spectrum
@@ -135,19 +135,3 @@ def get_loglike(class_input, likes_input, class_run):
             cr_mod.append(cr(z, class_run))
         lnl += -0.5 * (np.mean(cr_mod) - y) ** 2.0 / err ** 2.0
     return lnl
-
-
-# # Test
-# omo = 0.5
-# cosmo_fid = {
-#     "output": "mPk",
-#     "z_max_pk": 0.67,
-#     "P_k_max_1/Mpc": 10,
-#     "Omega_b": 0.232 * Om0_fid,
-#     "Omega_cdm": 0.186 * Om0_fid,
-#     "Omega_k": -0.1,
-# }
-# run_fid = classy.Class()
-# run_fid.set(cosmo_fid)
-# run_fid.compute()
-# print(get_loglike({}, {}, run_fid))
