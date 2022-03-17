@@ -4,7 +4,7 @@
 
 ## Purpose
 
-The ECLAIR suite can be found at https://github.com/s-ilic/ECLAIR. The likelihoods present in this repository were developped during research projects. They complement the ones already contained in the ECLAIR suite.
+The likelihoods in this repository were developped during research projects. They are ready to use with the ECLAIR suite https://github.com/s-ilic/ECLAIR.
 
 ## Likelihoods
 
@@ -17,9 +17,9 @@ The ECLAIR suite can be found at https://github.com/s-ilic/ECLAIR. The likelihoo
 
 ## License
 
-This suite of modules is licensed under the MIT License. See the [LICENSE file](https://github.com/louisperenon/ECLAIR_likelihoods/blob/main/LICENSE) for more details.
+This package is licensed under the MIT License. See the [LICENSE file](https://github.com/louisperenon/ECLAIR_likelihoods/blob/main/LICENSE) for more details.
 
 ## Code of conduct
 
-Please make sure to adere to the code of conduct of ECLAIR (https://github.com/s-ilic/ECLAIR/blob/master/README.md) and cite the references therein. When using a likelihood of this package please make sure to cite appropriately the articles (weblinks below) where it has been developed, where the tools involved were first developed, where the data was released as described above and anything else you feel necessary.
+Please make sure to adere to the code of conduct of ECLAIR (https://github.com/s-ilic/ECLAIR/blob/master/README.md) and cite the references therein. When using a likelihood of this package please make sure to cite appropriately the articles (links detailed above) where it has been developed, where the tools involved were first developed, where the data was released as described above and anything else you feel necessary.
 
