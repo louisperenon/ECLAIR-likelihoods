@@ -3,6 +3,7 @@ import numpy as np
 from scipy.integrate import trapz
 from scipy.interpolate import interp1d
 
+
 """BOSS DR7 and DR12 clustering ratio likelihood.
 
 This module computes the likelihood of the clustering ratio (CR) for the
@@ -15,6 +16,7 @@ The BOSS DR7 catalogue was released in https://arxiv.org/abs/0812.0649
 The BOSS DR12 catalogue was released in https://arxiv.org/abs/1501.00963
 The corresponding CR measurements were released in https://arxiv.org/abs/1712.02886.
 """
+
 
 # ************
 # *** Data ***
