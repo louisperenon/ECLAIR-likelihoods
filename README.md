@@ -9,15 +9,15 @@ The likelihoods in this repository were developed during research projects. They
 ## Likelihoods
 
  * CR_BOSS: clustering ratio with BOSS DR7 and DR12 data.
-     - Likelihood XXX
+     - Likelihood https://arxiv.org/abs/2206.03059
      - Clustering ratio https://arxiv.org/abs/1210.2365
      - BOSS DR7 catalogue https://arxiv.org/abs/0812.0649
      - BOSS DR12 catalogue https://arxiv.org/abs/1501.00963
      - BOSS DR7 and DR12 clustering ratio data: https://arxiv.org/abs/1712.02886
 
  * RSD: redshift space distortion data.
-     - Likelihood XX
-     - Check Table 1 of XXX for the references of the measurements
+     - Likelihood https://arxiv.org/abs/2206.03059
+     - Check Table 1 of https://arxiv.org/abs/2206.03059 for the references of the measurements
 
 ## License
 
