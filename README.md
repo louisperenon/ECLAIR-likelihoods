@@ -21,7 +21,7 @@ The likelihoods in this repository were developed during research projects. They
 
 ## License
 
-This package is licensed under the MIT License. See the [LICENSE file](https://github.com/louisperenon/ECLAIR_likelihoods/blob/main/LICENSE) for more details.
+This package is licensed under the MIT License. See the [LICENSE file](https://github.com/louisperenon/ECLAIR-likelihoods/blob/main/LICENSE) for more details.
 
 ## Code of conduct
 
